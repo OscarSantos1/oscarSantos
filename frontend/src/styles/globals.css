@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,15 +9,15 @@ html {
 }
 
 body {
-  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
   color: #444444;
   font-size: 9pt;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .hide-scroll {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* ANIMATIONS */
@@ -27,13 +27,16 @@ body {
 }
 @keyframes roll-in {
   0% {
-    transform: translateX(-124%);
+    left: 4px;
   }
   35% {
-    transform: translateX(-124%);
+    left: 4px;
   }
   90% {
-    transform: translateX(0px);
+    left: calc(100% - 224px);
+  }
+  100% {
+    left: calc(100% - 224px);
   }
 }
 
@@ -56,14 +59,14 @@ body {
   animation: activate 1300ms ease 1;
 }
 @keyframes activate {
-  0% { 
-    background-color: #504B48;
+  0% {
+    background-color: #504b48;
   }
-  52% { 
-    background-color: #504B48;
+  52% {
+    background-color: #504b48;
   }
   100% {
-    background-color: #2954B5;
+    background-color: #2954b5;
   }
 }
 
@@ -71,8 +74,8 @@ body {
   animation: bounce-in 1s ease 1;
 }
 @keyframes bounce-in {
-  0% { 
-    transform: translateY(0); 
+  0% {
+    transform: translateY(0);
     border-radius: 9999px;
   }
   20% {
@@ -91,8 +94,8 @@ body {
   animation: bounce-out 1s ease 1;
 }
 @keyframes bounce-out {
-  0% { 
-    transform: translateY(0); 
+  0% {
+    transform: translateY(0);
     border-radius: 3rem;
   }
   20% {
@@ -115,7 +118,13 @@ body {
   animation: fade-in 1300ms linear 1;
 }
 @keyframes fade-in {
-  0% { opacity: 0; }
-  70% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

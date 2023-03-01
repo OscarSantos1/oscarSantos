@@ -19,20 +19,17 @@ export default function Home() {
       <main className="bg-[#FAFAFC] h-screen w-screen py-10 pl-10 lg:pr-10 md:pr-5">
         <h1 className="text-2xl md:text-6xl">Oscar de los Santos</h1>
         <p className=" text-xl ml-2">Full-Stack Developer</p>
-        <div className="flex justify-between items-center h-1/3 min-h-[226px] overflow-clip lg:pl-14 lg:pr-10">
+        <div className="flex justify-between items-center h-1/3 min-h-[226px] overflow-clip lg:pl-14 md:pr-10">
           <p className="w-1/2 lg:text-[16px] md:text-[14px] pr-4 md:pr-10 ">
             I'm passionate about creating new products and tools. I love working
             with other people and most importantly helping a vision come to
             life.
           </p>
-          <div className="hidden md:flex relative justify-end items-center h-[226px] w-[500px] min-w-[500px] pr-[3px] bg-[#2954B5] rounded-full overflow-hidden activate">
-            <div className="relative h-[220px] w-[220px] rounded-full overflow-hidden roll-in">
-              <Image src="/../public/home-office.png" fill />
-            </div>
-          </div>
-          <div className="flex flex-col justify-end items-center pb-[3px] h-5/6 w-[120px] bg-[#2954B5] rounded-full mr-10 activate md:hidden">
-            <div className="relative h-[114px] w-[114px] rounded-full overflow-hidden roll-down md:hidden">
-              <Image src="/../public/home-office.png" fill />
+          <div className="flex relative justify-end items-center h-[226px] w-[500px] pr-[3px] bg-[#2954B5] rounded-full overflow-hidden activate">
+            <div className="absolute right-1 roll-in">
+              <div className="relative h-[220px] w-[220px] rounded-full overflow-hidden">
+                <Image src="/../public/home-office.png" fill />
+              </div>
             </div>
           </div>
         </div>
