@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  color: #444444;
+  font-size: 9pt;
+  background-color: #FAFAFA;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ANIMATIONS */
+
+.roll-in {
+  animation: roll-in 1300ms ease 1;
+}
+@keyframes roll-in {
+  0% {
+    transform: translateX(-124%);
+  }
+  35% {
+    transform: translateX(-124%);
+  }
+  90% {
+    transform: translateX(0px);
+  }
+}
+
+.roll-down {
+  animation: roll-down 1300ms ease 1;
+}
+@keyframes roll-down {
+  0% {
+    transform: translateY(-80%);
+  }
+  35% {
+    transform: translateY(-80%);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+}
+
+.activate {
+  animation: activate 1300ms ease 1;
+}
+@keyframes activate {
+  0% { 
+    background-color: #504B48;
+  }
+  52% { 
+    background-color: #504B48;
+  }
+  100% {
+    background-color: #2954B5;
+  }
+}
+
+.bounce-in {
+  animation: bounce-in 1s ease 1;
+}
+@keyframes bounce-in {
+  0% { 
+    transform: translateY(0); 
+    border-radius: 9999px;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px);
+    border-radius: 6rem;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    border-radius: 3rem;
+  }
+}
+
+.bounce-out {
+  animation: bounce-out 1s ease 1;
+}
+@keyframes bounce-out {
+  0% { 
+    transform: translateY(0); 
+    border-radius: 3rem;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px);
+    border-radius: 6rem;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    border-radius: 9999px;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1300ms linear 1;
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  70% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-out {
+  animation: fade-out 1300ms linear 1;
+}
+@keyframes fade-out {
+  0% { opacity: 1; }
+  70% { opacity: 0;
+    pointer-events:none }
+  100% { opacity: 0; 
+    pointer-events:none}
+}

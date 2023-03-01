@@ -1,0 +1,47 @@
+[
+  {
+    "id": 0,
+    "name": "Do me.",
+    "brandColor": "bg-green",
+    "about": "Do me is a GTD type web app that helps boost productivity for people that have a hard time commiting to a schedule",
+    "technologies": [
+      "HTML & CSS",
+      "React JS",
+      "MySQL",
+      "Python",
+      "Flask"
+    ],
+    "url": "",
+    "repo": "" 
+  },
+  {
+    "id": 1,
+    "name": "notARealStore",
+    "brandColor": "bg-red",
+    "about": "notArealStore is a complete online store where you can find urban style clothes and accesories for men.",
+    "technologies": [
+      "HTML & CSS",
+      "React JS",
+      "MySQL",
+      "Python",
+      "Flask"
+    ],
+    "url": "",
+    "repo": "" 
+  },
+  {
+    "id": 2,
+    "name": "Blank Page",
+    "brandColor": "bg-pink",
+    "about": "Blank Page is a AI powered tool for artists and creators to get out of a creative block.",
+    "technologies": [
+      "HTML & CSS",
+      "React JS",
+      "MySQL",
+      "Python",
+      "Flask"
+    ],
+    "url": "",
+    "repo": "" 
+  }
+]
