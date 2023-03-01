@@ -119,14 +119,3 @@ body {
   70% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-.fade-out {
-  animation: fade-out 1300ms linear 1;
-}
-@keyframes fade-out {
-  0% { opacity: 1; }
-  70% { opacity: 0;
-    pointer-events:none }
-  100% { opacity: 0; 
-    pointer-events:none}
-}
