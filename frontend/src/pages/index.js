@@ -33,27 +33,33 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex md:flex-col md:items-center md:justify-center bg-[#2954B5] h-1/2 w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full">
-          <h3 className="text-lg text-[#E7E7E7] -mt-4 mb-4 fade-in">
+        <div className="relative hidden md:flex md:flex-col md:items-center md:justify-center px-14 bg-[#2954B5] h-1/2 w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full">
+          <h3 className="absolute top-1 text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
             {oneSelected ? selected.name : "Latest Work"}
           </h3>
-          <div
-            className={`px-14 flex ${
-              oneSelected ? "justify-start" : "justify-between"
-            } w-full`}
-          >
+          <div className="relative flex w-full bg-slate-400">
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
                 title={project.name}
                 color={project.brandColor}
                 display={!oneSelected || selected === project}
+                oneSelected={oneSelected}
+                selected={selected.name}
                 set={() => {
                   setOneSelected(true);
                   setSelected(project);
                 }}
               />
             ))}
+            <iframe
+              className={`absolute top-[-110px] z-20 ${
+                oneSelected ? "fade-in-fast" : "hidden"
+              }`}
+              width="330"
+              height="220"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+            ></iframe>
           </div>
         </div>
       </main>
