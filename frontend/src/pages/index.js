@@ -1,8 +1,10 @@
 import ProjectCard from "@/components/ProjectCard";
+import TechTag from "@/components/TechTag";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import projects from "../data/projects.json";
+import { IoIosCloseCircle } from "react-icons/io";
 
 export default function Home() {
   const [oneSelected, setOneSelected] = useState(false);
@@ -37,7 +39,21 @@ export default function Home() {
           <h3 className="absolute top-1 text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
             {oneSelected ? selected.name : "Latest Work"}
           </h3>
-          <div className="relative flex w-full bg-slate-400">
+          {oneSelected ? (
+            <div className="absolute flex items-center justify-center rounded-full right-9 top-1/2 mt-[-20px] cursor-pointer">
+              <IoIosCloseCircle
+                onClick={() => {
+                  setOneSelected(false);
+                  setSelected({});
+                }}
+                className="text-[#E7E7E7] z-30 fade-instant"
+                size={40}
+              />
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="relative flex w-full fade-in">
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -52,14 +68,27 @@ export default function Home() {
                 }}
               />
             ))}
-            <iframe
-              className={`absolute top-[-110px] z-20 ${
+            <div
+              className={`absolute flex gap-10 lg:gap-20 justify-between top-[-110px] z-20 ${
                 oneSelected ? "fade-in-fast" : "hidden"
               }`}
-              width="330"
-              height="220"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
-            ></iframe>
+            >
+              <iframe
+                className="min-w-[330px]"
+                width="330"
+                height="220"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+              ></iframe>
+              <div className="text-white">
+                <div className="pr-12">
+                  {selected.technologies?.map((tech) => (
+                    <TechTag tech={tech} />
+                  ))}
+                </div>
+                <h5 className="mt-1 text-lg">About</h5>
+                <p className="mt-2 pr-24">{selected.about}</p>
+              </div>
+            </div>
           </div>
         </div>
       </main>

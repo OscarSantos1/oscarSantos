@@ -10,7 +10,7 @@ const ProjectCard = ({ title, color, set, oneSelected, selected }) => {
           title == "Do me."
             ? `absolute top-[-110px] ${
                 !oneSelected
-                  ? "one fade-in"
+                  ? "one fade-instant"
                   : selected == "Do me."
                   ? "z-10 one-square bg-[#8f9c2f] w-[330px] opacity-0"
                   : "one-out opacity-0"
@@ -18,14 +18,14 @@ const ProjectCard = ({ title, color, set, oneSelected, selected }) => {
             : title == "notARealStore"
             ? `absolute top-[-110px] ${
                 !oneSelected
-                  ? "two fade-in"
+                  ? "two fade-instant"
                   : selected == "notARealStore"
                   ? "one z-10 two-square bg-[#E93860] w-[330px] opacity-0"
                   : "one two-out opacity-0"
               }  flex flex-col justify-center items-center`
             : `absolute top-[-110px] ${
                 !oneSelected
-                  ? "three fade-in"
+                  ? "three fade-instant"
                   : selected == "Blank Page"
                   ? "one three-square bg-[#E0C4C5] w-[330px] opacity-0"
                   : "one three-out opacity-0"

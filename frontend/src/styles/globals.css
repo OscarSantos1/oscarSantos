@@ -322,3 +322,15 @@ body {
     opacity: 1;
   }
 }
+
+.fade-instant {
+  animation: fade-instant 500ms linear 1;
+}
+@keyframes fade-instant {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
