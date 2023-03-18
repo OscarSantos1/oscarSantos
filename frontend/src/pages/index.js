@@ -90,18 +90,18 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex md:justify-start items-center pr-12">
-                  <div className="flex justify-end">
-                    <button className="flex items-center justify-between w-28 pl-4 pr-2 lg:py-2 md:py-1 bg-[#212530]  rounded-l-full">
+                  <a href={selected.url} className="flex justify-end">
+                    <button className="flex items-center justify-between w-28 pl-4 pr-2 lg:py-2 md:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
                       <div>Go to site</div>
                       <GiEarthAmerica className="pb-1" size={20} />
                     </button>
-                  </div>
-                  <div className="">
-                    <button className="flex items-center justify-between w-[92px] pl-2 pr-4 lg:py-[5px] md:py-[1px] bg-[#212530]  rounded-r-full border-l border-slate-600">
+                  </a>
+                  <a href={selected.repo} className="">
+                    <button className="flex items-center justify-between w-[92px] pl-2 pr-4 lg:py-[5px] md:py-[1px] bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
                       <DiGithubBadge className="pb-1" size={26} />
                       <div>Code</div>
                     </button>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

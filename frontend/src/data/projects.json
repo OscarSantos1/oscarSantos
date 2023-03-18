@@ -13,8 +13,8 @@
       "Docker",
       "HTML & CSS"
     ],
-    "url": "",
-    "repo": ""
+    "url": "https://notarealstore.herokuapp.com",
+    "repo": "https://github.com/OscarSantos1/notARealStore"
   },
   {
     "id": 1,
@@ -31,8 +31,8 @@
       "Heroku",
       "HTML & CSS"
     ],
-    "url": "",
-    "repo": ""
+    "url": "https://notarealstore.herokuapp.com",
+    "repo": "https://github.com/OscarSantos1/notARealStore"
   },
   {
     "id": 2,
@@ -41,13 +41,15 @@
     "about": "Blank Page is a simple but highly useful AI powered tool for artists and creators to get out of a creative block. With one click, Blank Page provides you with an AI generated premise for your next story, ilustration, animation, you name it.",
     "technologies": [
       "Open AI",
+      "TypeScript",
       "Next JS",
       "Tailwind CSS",
       "Node",
       "Express",
-      "AWS"
+      "Heroku",
+      "HTML & CSS"
     ],
-    "url": "",
-    "repo": ""
+    "url": "https://blank-page.herokuapp.com",
+    "repo": "https://github.com/OscarSantos1/blankPage"
   }
 ]
