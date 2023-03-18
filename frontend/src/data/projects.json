@@ -14,7 +14,8 @@
       "HTML & CSS"
     ],
     "url": "https://notarealstore.herokuapp.com",
-    "repo": "https://github.com/OscarSantos1/notARealStore"
+    "repo": "https://github.com/OscarSantos1/notARealStore",
+    "demo": "https://www.youtube.com/embed/pPdGAN3osEo?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=pPdGAN3osEo"
   },
   {
     "id": 1,
@@ -32,7 +33,8 @@
       "HTML & CSS"
     ],
     "url": "https://notarealstore.herokuapp.com",
-    "repo": "https://github.com/OscarSantos1/notARealStore"
+    "repo": "https://github.com/OscarSantos1/notARealStore",
+    "demo": "https://www.youtube.com/embed/uUI5DWv3MeI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=uUI5DWv3MeI"
   },
   {
     "id": 2,
@@ -50,6 +52,7 @@
       "HTML & CSS"
     ],
     "url": "https://blank-page.herokuapp.com",
-    "repo": "https://github.com/OscarSantos1/blankPage"
+    "repo": "https://github.com/OscarSantos1/blankPage",
+    "demo": "https://www.youtube.com/embed/pPdGAN3osEo?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=pPdGAN3osEo"
   }
 ]

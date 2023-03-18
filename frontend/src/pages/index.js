@@ -75,7 +75,7 @@ export default function Home() {
                 className="min-w-[330px]"
                 width="330"
                 height="220"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+                src={selected.demo}
               ></iframe>
               <div className="text-white flex flex-col justify-between">
                 <div>
