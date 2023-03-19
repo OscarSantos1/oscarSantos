@@ -3,6 +3,9 @@
     "id": 0,
     "name": "Do me.",
     "brandColor": "green",
+    "position": "one",
+    "open": "one-square",
+    "hide": "one-out",
     "about": "Do me is a GTD type web app that helps boost productivity for people that have a hard time commiting to a schedule",
     "technologies": [
       "React JS",
@@ -21,6 +24,9 @@
     "id": 1,
     "name": "notARealStore",
     "brandColor": "red",
+    "position": "two",
+    "open": "two-square",
+    "hide": "two-out",
     "about": "notArealStore is a complete online store where you can find urban style clothes and accesories for men.",
     "technologies": [
       "Next JS",
@@ -40,6 +46,9 @@
     "id": 2,
     "name": "Blank Page",
     "brandColor": "pink",
+    "position": "three",
+    "open": "three-square",
+    "hide": "three-out",
     "about": "Blank Page is a simple but highly useful AI powered tool for artists and creators to get out of a creative block. With one click, Blank Page provides you with an AI generated premise for your next story, ilustration, animation, you name it.",
     "technologies": [
       "Open AI",

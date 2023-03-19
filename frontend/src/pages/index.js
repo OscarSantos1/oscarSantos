@@ -23,8 +23,8 @@ export default function Home() {
       <main className="bg-[#FAFAFC] h-screen w-screen py-10 pl-10 lg:pr-10 md:pr-5">
         <h1 className="text-2xl md:text-6xl">Oscar de los Santos</h1>
         <p className=" text-xl ml-2">Full-Stack Developer</p>
-        <div className="flex justify-between items-center h-1/3 min-h-[226px] overflow-clip lg:pl-14 md:pr-10">
-          <p className="w-1/2 lg:text-[16px] md:text-[14px] pr-4 md:pr-10 ">
+        <div className="flex justify-between items-center h-1/3 min-h-[226px] overflow-clip lg:pl-2 md:pr-10">
+          <p className="w-1/2 2xl:text-2xl lg:text-[16px] md:text-[14px] pr-4 md:pr-10 ">
             I'm passionate about creating new products and tools. I love working
             with other people and most importantly helping a vision come to
             life.
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative hidden md:flex md:flex-col md:items-center md:justify-center px-14 bg-[#2954B5] h-1/2 w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full">
+        <div className="relative hidden md:flex md:flex-col md:items-center md:justify-center px-14 bg-[#2954B5] max-h-[400px] h-1/2 w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full">
           <h3 className="absolute top-1 text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
             {oneSelected ? selected.name : "Latest Work"}
           </h3>
@@ -57,6 +57,9 @@ export default function Home() {
                 key={project.id}
                 title={project.name}
                 color={project.brandColor}
+                position={project.position}
+                open={project.open}
+                hide={project.hide}
                 display={!oneSelected || selected === project}
                 oneSelected={oneSelected}
                 selected={selected.name}

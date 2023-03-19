@@ -15,6 +15,18 @@ body {
   background-color: #fafafa;
 }
 
+.green {
+  background-color: #8f9c2f;
+}
+
+.red {
+  background-color: #e93860;
+}
+
+.pink {
+  background-color: #e0c4c5;
+}
+
 .hide-scroll {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
