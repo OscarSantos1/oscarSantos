@@ -15,6 +15,24 @@ body {
   background-color: #fafafa;
 }
 
+.slider-frame {
+  position: relative;
+  width: 39%;
+  padding-top: 17%; /* 1:1 Aspect Ratio */
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.square {
+  aspect-ratio: 1;
+}
+
 .green {
   background-color: #8f9c2f;
 }
@@ -47,20 +65,42 @@ body {
 /* ANIMATIONS */
 
 .roll-in {
-  animation: roll-in 1300ms ease 1;
+  animation-name: roll-in;
+  animation-duration: 1300ms;
+  animation-timing-function: ease;
+  animation-delay: 0.001s;
+  animation-iteration-count: 1;
+  -webkit-animation-name: roll-in;
+  -webkit-animation-duration: 1300ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 0.001s;
+  -webkit-animation-iteration-count: 1;
 }
+
 @keyframes roll-in {
   0% {
-    left: 4px;
+    -webkit-left: 0%;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0, 0);
   }
   35% {
-    left: 4px;
+    -webkit-left: 0%;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0, 0);
   }
   90% {
-    left: calc(100% - 224px);
+    -webkit-left: 100%;
+    left: 100%;
+    -webkit-transform: translate(-100%, 0%);
+    transform: translate(-100%, 0);
   }
   100% {
-    left: calc(100% - 224px);
+    -webkit-left: 100%;
+    left: 100%;
+    -webkit-transform: translate(-100%, 0%);
+    transform: translate(-100%, 0);
   }
 }
 
