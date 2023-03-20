@@ -4,11 +4,11 @@ const Icon = ({ title }) => {
   return (
     <>
       {title == "Do me." ? (
-        <IoIosCheckmarkCircle className="text-white" size={100} />
+        <IoIosCheckmarkCircle className="text-white h-[80%] w-[50%]" />
       ) : title == "notARealStore" ? (
-        <IoIosCart className="text-white" size={100} />
+        <IoIosCart className="text-white h-[80%] w-[50%]" />
       ) : (
-        <IoMdBulb className="text-white" size={100} />
+        <IoMdBulb className="text-white h-[80%] w-[50%]" />
       )}
     </>
   );

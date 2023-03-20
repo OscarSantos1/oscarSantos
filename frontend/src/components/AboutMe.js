@@ -16,7 +16,7 @@ const AboutMe = () => {
     window.addEventListener("resize", () => handleResize(box));
   }, []);
   return (
-    <div className="flex justify-between items-center h-[36%] min-h-[226px] lg:pl-2 md:pr-10 bg-orange-500">
+    <div className="flex justify-between items-center h-[36%] min-h-[226px] lg:pl-2 md:pr-10">
       <p className="w-[55%] text-[#646464] 2xl:text-2xl lg:text-[16px] md:text-[14px]">
         I'm passionate about creating new products and tools. I love working
         with other people and most importantly helping a vision come to life.

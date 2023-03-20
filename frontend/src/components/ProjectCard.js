@@ -16,7 +16,7 @@ const ProjectCard = ({
   return (
     <>
       <div
-        className={`absolute top-[-110px] flex flex-col justify-center items-center ${
+        className={`absolute flex flex-col justify-center items-center ${
           !oneSelected
             ? `${position} fade-instant`
             : selected == title
@@ -25,12 +25,19 @@ const ProjectCard = ({
         }`}
       >
         <div
-          onClick={set}
-          className={`flex items-center justify-center h-[220px] w-[220px] ${color} rounded-full cursor-pointer overflow-clip`}
+          className={`flex items-center justify-center ${color} rounded-full cursor-pointer overflow-clip project-button`}
         >
-          <Icon title={title} />
+          <div
+            id="project-button"
+            onClick={set}
+            className={`flex items-center justify-center ${color} rounded-full cursor-pointer overflow-clip project-button`}
+          >
+            <Icon title={title} />
+          </div>
+          {!oneSelected && (
+            <h3 className="absolute -bottom-6 text-[#E7E7E7] mt-2">{title}</h3>
+          )}
         </div>
-        {!oneSelected && <h3 className="text-[#E7E7E7] mt-2">{title}</h3>}
       </div>
     </>
   );

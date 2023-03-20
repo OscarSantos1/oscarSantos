@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import TechTag from "@/components/TechTag";
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import projects from "../data/projects.json";
 import { IoIosCloseCircle } from "react-icons/io";
 import { DiGithubBadge } from "react-icons/di";
@@ -12,6 +12,22 @@ import AboutMe from "@/components/AboutMe";
 export default function Home() {
   const [oneSelected, setOneSelected] = useState(false);
   const [selected, setSelected] = useState({});
+
+  useEffect(() => {
+    function handleResize(box) {
+      const projectBtns = document.getElementsByClassName("project-button");
+      const padding = Math.round(box.offsetHeight * 0.15);
+      box.style.paddingLeft = `${padding}px`;
+      box.style.paddingRight = `${padding}px`;
+      for (var i = 0; i < projectBtns.length; i++) {
+        projectBtns[i].style.height = `${box.offsetHeight - padding * 2}px`;
+        projectBtns[i].style.width = `${box.offsetHeight - padding * 2}px`;
+      }
+    }
+    const box = document.getElementById("work-banner");
+    handleResize(box);
+    window.addEventListener("resize", () => handleResize(box));
+  }, []);
 
   return (
     <>
@@ -24,7 +40,10 @@ export default function Home() {
       <main className="bg-[#FAFAFC] h-screen w-screen py-10 pl-10 lg:pr-10 md:pr-5">
         <Header />
         <AboutMe />
-        <div className="relative hidden md:flex md:flex-col md:items-center md:justify-center px-14 bg-[#2954B5] max-h-[400px] h-1/2 w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full">
+        <div
+          id="work-banner"
+          className="relative hidden md:flex md:flex-col md:items-center md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full"
+        >
           <h3 className="absolute top-1 text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
             {oneSelected ? selected.name : "Latest Work"}
           </h3>
@@ -38,7 +57,7 @@ export default function Home() {
               size={40}
             />
           )}
-          <div className="relative flex w-full fade-in">
+          <div className="relative flex items-center h-full bg-lime-400 w-full fade-in">
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -57,7 +76,7 @@ export default function Home() {
               />
             ))}
             <div
-              className={`absolute w-[90%] flex gap-10 lg:gap-[8%] justify-start top-[-110px] z-20 ${
+              className={`absolute w-[90%] flex gap-10 lg:gap-[8%] justify-start z-20 ${
                 oneSelected ? "fade-in-fast" : "hidden"
               }`}
             >
