@@ -41,6 +41,11 @@ export default function Home() {
         document.getElementById(selected.name).style.width = `${Math.round(
           (box.offsetHeight - padding * 2) * 1.5
         )}px`;
+        document.getElementById(
+          "project-container"
+        ).style.width = `${Math.round(
+          (box.offsetHeight - padding * 2) * 1.5
+        )}px`;
       }
     }
     const box = document.getElementById("work-banner");
