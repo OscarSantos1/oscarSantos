@@ -41,6 +41,10 @@ body {
   aspect-ratio: 1;
 }
 
+.rectangle {
+  aspect-ratio: 3/2;
+}
+
 .green {
   background-color: #8f9c2f;
 }
@@ -267,6 +271,20 @@ body {
 }
 @keyframes fade-out {
   0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-out-wait {
+  animation: fade-out-wait 1500ms linear 1;
+}
+@keyframes fade-out-wait {
+  0% {
+    opacity: 1;
+  }
+  70% {
     opacity: 1;
   }
   100% {
