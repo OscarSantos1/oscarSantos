@@ -4,9 +4,21 @@ import projects from "../data/projects.json";
 import Header from "@/components/Header";
 import AboutMe from "@/components/AboutMe";
 import ProjectBannerH from "@/components/ProjectBannerH";
+import ProjectBannerV from "@/components/ProjectBannerV";
 
 export default function Home() {
   const [animate, setAnimate] = useState(false);
+  const [horizontal, setHorizontal] = useState(false);
+  const [oneSelected, setOneSelected] = useState(false);
+  const [selected, setSelected] = useState({});
+
+  useEffect(() => {
+    function checkAspect() {
+      setHorizontal(window.innerWidth / window.innerHeight > 1 ? true : false);
+    }
+    checkAspect();
+    window.addEventListener("resize", checkAspect);
+  });
 
   return (
     <>
@@ -17,13 +29,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`bg-[#FAFAFC] h-screen w-screen py-4 pl-4 md:py-10 md:pl-10 lg:pr-10 md:pr-5 ${
+        className={`flex flex-col bg-[#FAFAFC] h-screen w-screen py-4 pl-4 pr-4 md:py-10 md:pl-10 lg:pr-10 md:pr-5 ${
           animate ? "opacity-100" : "opacity-0"
         }`}
       >
         <Header />
         <AboutMe setAnimate={setAnimate} animate={animate} />
-        <ProjectBannerH projects={projects} />
+        {horizontal ? (
+          <ProjectBannerH
+            projects={projects}
+            horizontal={horizontal}
+            oneSelected={oneSelected}
+            setOneSelected={setOneSelected}
+            selected={selected}
+            setSelected={setSelected}
+          />
+        ) : (
+          <ProjectBannerV
+            projects={projects}
+            oneSelected={oneSelected}
+            setOneSelected={setOneSelected}
+            selected={selected}
+            setSelected={setSelected}
+          />
+        )}
       </main>
     </>
   );

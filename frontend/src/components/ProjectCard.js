@@ -1,5 +1,3 @@
-import React from "react";
-import { IoIosCheckmarkCircle, IoIosCart, IoMdBulb } from "react-icons/io";
 import Icon from "./Icon";
 
 const ProjectCard = ({

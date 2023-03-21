@@ -72,6 +72,24 @@ body {
   translate: -100%;
 }
 
+.one-ver {
+  top: 0px;
+  left: 50%;
+  translate: -50% 0%;
+}
+
+.two-ver {
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.three-ver {
+  top: 100%;
+  left: 50%;
+  translate: -50% -100%;
+}
+
 /* ANIMATIONS */
 
 .roll-in {

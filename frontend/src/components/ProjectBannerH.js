@@ -5,9 +5,14 @@ import { DiGithubBadge } from "react-icons/di";
 import { GiEarthAmerica } from "react-icons/gi";
 import { useState, useEffect } from "react";
 
-const ProjectBannerH = ({ projects }) => {
-  const [oneSelected, setOneSelected] = useState(false);
-  const [selected, setSelected] = useState({});
+const ProjectBannerH = ({
+  projects,
+  horizontal,
+  oneSelected,
+  setOneSelected,
+  selected,
+  setSelected,
+}) => {
   const [square, setSquare] = useState("");
   const [circle, setCircle] = useState("");
   useEffect(() => {
@@ -26,12 +31,14 @@ const ProjectBannerH = ({ projects }) => {
       );
       setCircle(`${box.offsetHeight - padding * 2}px`);
       setSquare(`${Math.round((box.offsetHeight - padding * 2) * 1.5)}px`);
-      document.getElementById("video-frame").style.width = `${Math.round(
-        (box.offsetHeight - padding * 2) * 1.5
-      )}px`;
-      document.getElementById("video-frame").style.height = `${
-        box.offsetHeight - padding * 2
-      }px`;
+      if (horizontal) {
+        document.getElementById("video-frame").style.width = `${Math.round(
+          (box.offsetHeight - padding * 2) * 1.5
+        )}px`;
+        document.getElementById("video-frame").style.height = `${
+          box.offsetHeight - padding * 2
+        }px`;
+      }
       if (oneSelected) {
         document.getElementById(selected.name).style.width = `${Math.round(
           (box.offsetHeight - padding * 2) * 1.5
