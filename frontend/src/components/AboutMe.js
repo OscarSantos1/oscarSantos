@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 
-const AboutMe = () => {
+const AboutMe = ({ setAnimate, animate }) => {
   useEffect(() => {
     function handleResize(box) {
       document.getElementById("slider-head").style.height = `${
@@ -25,14 +25,23 @@ const AboutMe = () => {
         id="slider-frame"
         className="relative w-[40%] pt-[20%] lg:w-[34%] lg:pt-[17%]"
       >
-        <div className="slider flex items-center bg-[#2954B5] rounded-full overflow-clip activate">
+        <div
+          className={`slider flex items-center bg-[#2954B5] rounded-full overflow-clip ${
+            animate && "activate"
+          }`}
+        >
           <div className="flex w-full h-full relative items-center mx-1">
-            <div className="absolute py-1 flex items-center h-full w-min right-0 roll-in">
+            <div
+              className={`absolute py-1 flex items-center h-full w-min right-0 ${
+                animate && "roll-in"
+              }`}
+            >
               <div
                 id="slider-head"
                 className="relative rounded-full overflow-hidden"
               >
                 <Image
+                  onLoad={() => setAnimate(true)}
                   alt={"image"}
                   src="/../public/images/home-office.png"
                   fill

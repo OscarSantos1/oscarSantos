@@ -14,6 +14,7 @@ export default function Home() {
   const [selected, setSelected] = useState({});
   const [square, setSquare] = useState("");
   const [circle, setCircle] = useState("");
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     function handleResize(box) {
@@ -61,9 +62,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-[#FAFAFC] h-screen w-screen py-10 pl-10 lg:pr-10 md:pr-5">
+      <main
+        className={`bg-[#FAFAFC] h-screen w-screen py-10 pl-10 lg:pr-10 md:pr-5 ${
+          animate ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <Header />
-        <AboutMe />
+        <AboutMe setAnimate={setAnimate} animate={animate} />
         <div
           id="work-banner"
           className="relative hidden md:flex md:flex-col md:items-start md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full"
@@ -114,7 +119,7 @@ export default function Home() {
               oneSelected ? "fade-in-fast" : "hidden"
             }`}
           >
-            <div className="flex items-center  bg-white/20">
+            <div className="flex items-center">
               <iframe
                 id="video-frame"
                 width="330"
