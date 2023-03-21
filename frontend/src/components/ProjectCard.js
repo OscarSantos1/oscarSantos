@@ -23,7 +23,7 @@ const ProjectCard = ({
           !oneSelected
             ? `opacity-1 fade-instant`
             : selected == title
-            ? `z-10 one-square ${color}`
+            ? `z-10 opacity-0 one-square ${color}`
             : `opacity-0 fade-out`
         }`}
       >

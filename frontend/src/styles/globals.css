@@ -142,41 +142,9 @@ body {
 
 /* PROJECT CARD ANIMATIONS */
 
-/* .one-out {
-  -webkit-animation: one-out 700ms ease 1;
-  animation: one-out 700ms ease 1;
-}
-
-@-webkit-keyframes one-out {
-  0% {
-    -webkit-opacity: 1;
-    opacity: 1;
-  }
-  90% {
-    -webkit-opacity: 1;
-    opacity: 1;
-  }
-  100% {
-    -webkit-opacity: 0;
-    opacity: 0;
-  }
-}
-
-@keyframes one-out {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}*/
-
 .one-square {
-  -webkit-animation: one-square 700ms ease 1;
-  animation: one-square 700ms ease 1;
+  -webkit-animation: one-square 900ms ease 1;
+  animation: one-square 900ms ease 1;
 }
 
 @-webkit-keyframes one-square {
@@ -193,6 +161,14 @@ body {
     opacity: 1;
     -webkit-border-radius: 200px;
     border-radius: 200px;
+  }
+  90% {
+    -webkit-opacity: 1;
+    opacity: 1;
+    -webkit-width: var(--with-open);
+    width: var(--with-open);
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
   }
   100% {
     -webkit-opacity: 1;
@@ -213,6 +189,11 @@ body {
   20% {
     opacity: 1;
     border-radius: 200px;
+  }
+  90% {
+    opacity: 1;
+    width: var(--with-open);
+    border-radius: 0px;
   }
   100% {
     opacity: 1;
