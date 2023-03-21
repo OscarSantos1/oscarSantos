@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`bg-[#FAFAFC] h-screen w-screen py-10 pl-10 lg:pr-10 md:pr-5 ${
+        className={`bg-[#FAFAFC] h-screen w-screen py-4 pl-4 md:py-10 md:pl-10 lg:pr-10 md:pr-5 ${
           animate ? "opacity-100" : "opacity-0"
         }`}
       >
