@@ -12,6 +12,7 @@ import AboutMe from "@/components/AboutMe";
 export default function Home() {
   const [oneSelected, setOneSelected] = useState(false);
   const [selected, setSelected] = useState({});
+  const [circle, setCircle] = useState("");
 
   useEffect(() => {
     function handleResize(box) {
@@ -23,6 +24,11 @@ export default function Home() {
         projectBtns[i].style.height = `${box.offsetHeight - padding * 2}px`;
         projectBtns[i].style.width = `${box.offsetHeight - padding * 2}px`;
       }
+      document.documentElement.style.setProperty(
+        "--with-open",
+        `${Math.round((box.offsetHeight - padding * 2) * 1.5)}px`
+      );
+      setCircle(`${Math.round((box.offsetHeight - padding * 2) * 1.5)}px`);
     }
     const box = document.getElementById("work-banner");
     handleResize(box);
@@ -42,9 +48,9 @@ export default function Home() {
         <AboutMe />
         <div
           id="work-banner"
-          className="relative hidden md:flex md:flex-col md:items-center md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full"
+          className="relative hidden md:flex md:flex-col md:items-start md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full"
         >
-          <h3 className="absolute top-1 text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
+          <h3 className="absolute top-1 self-center text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
             {oneSelected ? selected.name : "Latest Work"}
           </h3>
           {oneSelected && (
@@ -53,11 +59,16 @@ export default function Home() {
               onClick={() => {
                 setOneSelected(false);
                 setSelected({});
+                document.getElementById("project-container").style.width =
+                  "100%";
               }}
               size={40}
             />
           )}
-          <div className="relative flex items-center h-full bg-lime-400 w-full fade-in">
+          <div
+            id="project-container"
+            className={`relative flex items-center h-full w-full ease-in-out duration-700 fade-in`}
+          >
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -69,15 +80,18 @@ export default function Home() {
                 display={!oneSelected || selected === project}
                 oneSelected={oneSelected}
                 selected={selected.name}
+                circle={circle}
                 set={() => {
                   setOneSelected(true);
                   setSelected(project);
+                  document.getElementById("project-container").style.width =
+                    circle;
                 }}
               />
             ))}
             <div
               className={`absolute w-[90%] flex gap-10 lg:gap-[8%] justify-start z-20 ${
-                oneSelected ? "fade-in-fast" : "hidden"
+                oneSelected ? "hidden" : "hidden"
               }`}
             >
               <iframe

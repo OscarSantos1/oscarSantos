@@ -11,17 +11,20 @@ const ProjectCard = ({
   set,
   oneSelected,
   selected,
+  circle,
 }) => {
   const c = color;
   return (
     <>
       <div
-        className={`absolute flex flex-col justify-center items-center ${
+        id={title}
+        onClick={() => (document.getElementById(title).style.width = circle)}
+        className={`absolute flex flex-col justify-center items-center ${position} ${
           !oneSelected
-            ? `${position} fade-instant`
+            ? `opacity-1 fade-instant`
             : selected == title
-            ? `one z-10 ${open} ${color} w-[330px] opacity-0`
-            : `one ${hide} opacity-0`
+            ? `z-10 one-square ${color}`
+            : `opacity-0 fade-out`
         }`}
       >
         <div
