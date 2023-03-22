@@ -14,7 +14,9 @@ export default function Home() {
 
   useEffect(() => {
     function checkAspect() {
-      setHorizontal(window.innerWidth / window.innerHeight > 1 ? true : false);
+      setHorizontal(
+        window.innerWidth / window.innerHeight > 1.02 ? true : false
+      );
     }
     checkAspect();
     window.addEventListener("resize", checkAspect);
