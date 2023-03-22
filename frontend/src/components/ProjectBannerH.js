@@ -31,7 +31,7 @@ const ProjectBannerH = ({
       );
       setCircle(`${box.offsetHeight - padding * 2}px`);
       setSquare(`${Math.round((box.offsetHeight - padding * 2) * 1.5)}px`);
-      if (horizontal) {
+      if (horizontal && document.getElementById("video-frame")) {
         document.getElementById("video-frame").style.width = `${Math.round(
           (box.offsetHeight - padding * 2) * 1.5
         )}px`;
@@ -39,7 +39,7 @@ const ProjectBannerH = ({
           box.offsetHeight - padding * 2
         }px`;
       }
-      if (oneSelected) {
+      if (oneSelected && document.getElementById(selected.name)) {
         document.getElementById(selected.name).style.width = `${Math.round(
           (box.offsetHeight - padding * 2) * 1.5
         )}px`;

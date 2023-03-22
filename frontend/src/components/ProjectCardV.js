@@ -13,7 +13,6 @@ const ProjectCardV = ({
 }) => {
   return (
     <div
-      id={title}
       onClick={set}
       className={`absolute flex justify-center items-center ease-in-out duration-700 cursor-pointer ${
         !oneSelected

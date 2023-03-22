@@ -55,11 +55,7 @@ const ProjectBannerV = ({
             oneSelected ? "flex fade-in-fast z-10" : "hidden"
           } bottom-0 left-[50%] translate-x-[-50%] h-[36%] rectangle`}
         >
-          <iframe
-            className="h-full rectangle"
-            id="video-frame"
-            src={selected.demo}
-          ></iframe>
+          <iframe className="h-full rectangle" src={selected.demo}></iframe>
         </div>
         <div
           className={`absolute ${
