@@ -11,19 +11,19 @@ const ProjectBannerV = ({
   setSelected,
 }) => {
   return (
-    <div className="relative flex flex-col self-center justify-end items-center w-[100%] h-[100%] bg-[#2954B5] pt-10 md:pt-12 pb-2 rounded-t-full">
+    <div className="relative flex flex-col self-center justify-end items-center w-[100%] h-[100%] bg-[#2954B5] pt-10 md:pt-12 2xl:pt-20 pb-2 rounded-t-full">
       {oneSelected ? (
         <button
           onClick={() => {
             setOneSelected(false);
             setSelected({});
           }}
-          className="absolute top-[10px] md:top-[15px] self-center text-xs md:text-base font-bold bg-[#E7E7E7] text-[#2954B5] px-2 pt-[1px] rounded-full fade-instant"
+          className="absolute top-[10px] md:top-[15px] 2xl:top-[25px] self-center text-xs md:text-base 2xl:text-2xl font-bold bg-[#E7E7E7] text-[#2954B5] px-2  2xl:px-3 pt-[1px] rounded-full fade-instant"
         >
           Close
         </button>
       ) : (
-        <h3 className="absolute top-[10px] md:top-[15px] self-center text-sm md:text-lg text-[#E7E7E7] fade-in">
+        <h3 className="absolute top-[10px] md:top-[15px] 2xl:top-[25px] self-center text-sm md:text-lg 2xl:text-2xl text-[#E7E7E7] fade-in">
           Latest Work
         </h3>
       )}
@@ -31,7 +31,7 @@ const ProjectBannerV = ({
       <div className="relative flex items-end h-[100%] w-[70%] ">
         <div
           className={`relative w-full fade-in ease-in-out duration-700 ${
-            oneSelected ? "h-[36%]" : "h-[100%]"
+            oneSelected ? "h-[36%] 2xl:h-[50%]" : "h-[100%]"
           }`}
         >
           {projects.map((project) => (
@@ -52,18 +52,18 @@ const ProjectBannerV = ({
         </div>
         <div
           className={`absolute ${
-            oneSelected ? "flex fade-in-fast z-10" : "hidden"
-          } bottom-0 left-[50%] translate-x-[-50%] h-[36%] rectangle`}
+            oneSelected ? "flex justify-center fade-in-fast z-10" : "hidden"
+          } bottom-0 left-[50%] translate-x-[-50%] h-[36%] 2xl:h-[50%] rectangle`}
         >
           <iframe className="h-full rectangle" src={selected.demo}></iframe>
         </div>
         <div
           className={`absolute ${
             oneSelected ? "flex justify-center fade-in-fast" : "hidden"
-          } bottom-[36%] left-[50%] translate-x-[-50%] h-[64%] w-[100%]`}
+          } bottom-[36%] 2xl:bottom-[50%] left-[50%] translate-x-[-50%] h-[64%] 2xl:h-[50%] w-[100%]`}
         >
           <div className="text-white flex flex-col justify-around">
-            <div className="flex flex-col gap-2 justify-around items-center h-[70%]">
+            <div className="flex flex-col gap-2 justify-around items-center h-[70%] 2xl:max-h-[500px] xl:max-h-[400px] lg:max-h-[400px]">
               <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl">
                 {selected.name}
               </h3>
@@ -80,7 +80,7 @@ const ProjectBannerV = ({
               </p>
             </div>
             <div className="flex justify-center items-center">
-              <div className="flex md:text-xl xl:text-[20px]">
+              <div className="flex md:text-xl xl:text-[20px] ">
                 <a href={selected.url} className="flex justify-end">
                   <button className="flex items-center justify-between w-28 md:w-40 xl:w-40 pl-4 pr-2 lg:py-2 md:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
                     <div>Go to site</div>

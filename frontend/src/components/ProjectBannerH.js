@@ -59,7 +59,7 @@ const ProjectBannerH = ({
       id="work-banner"
       className="relative md:flex md:flex-col md:items-start md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[750px] ml-[-40px] mt-10 rounded-r-full"
     >
-      <h3 className="absolute top-1 self-center text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
+      <h3 className="absolute top-1 lg:top-3 2xl:top-9 self-center text-lg lg:text-[17px] 2xl:text-[35px] text-[#E7E7E7] fade-in">
         {oneSelected ? selected.name : "Latest Work"}
       </h3>
       {oneSelected && (
@@ -106,6 +106,7 @@ const ProjectBannerH = ({
         <div className="flex items-center">
           <iframe
             id="video-frame"
+            alt="Demo"
             width="330"
             height="220"
             src={selected.demo}

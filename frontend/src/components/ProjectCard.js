@@ -36,7 +36,9 @@ const ProjectCard = ({
             <Icon title={title} />
           </div>
           {!oneSelected && (
-            <h3 className="absolute -bottom-6 text-[#E7E7E7] mt-2">{title}</h3>
+            <h3 className="absolute 2xl:text-[20px] -bottom-6 2xl:-bottom-10 text-[#E7E7E7] mt-2">
+              {title}
+            </h3>
           )}
         </div>
       </div>
