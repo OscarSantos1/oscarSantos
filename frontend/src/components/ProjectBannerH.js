@@ -19,6 +19,7 @@ const ProjectBannerH = ({
     function handleResize(box) {
       const projectBtns = document.getElementsByClassName("project-button");
       const padding = Math.round(box.offsetHeight * 0.15);
+      const screenSize = window.innerWidth;
       box.style.paddingLeft = `${padding}px`;
       box.style.paddingRight = `${padding}px`;
       for (var i = 0; i < projectBtns.length; i++) {
@@ -38,6 +39,10 @@ const ProjectBannerH = ({
         document.getElementById("video-frame").style.height = `${
           box.offsetHeight - padding * 2
         }px`;
+        document.getElementById("about-me").style.height =
+          screenSize > 768
+            ? `${document.getElementById("slider-frame").offsetHeight}px`
+            : "40%";
       }
       if (oneSelected && document.getElementById(selected.name)) {
         document.getElementById(selected.name).style.width = `${Math.round(
@@ -49,6 +54,14 @@ const ProjectBannerH = ({
           (box.offsetHeight - padding * 2) * 1.5
         )}px`;
       }
+      if (horizontal && document.getElementById("work-banner")) {
+        const Width = document.getElementById("work-banner").offsetWidth;
+        console.log(screenSize);
+        const minHeight = screenSize > 1024 ? Width / 4.3 : Width / 3.5;
+        document.getElementById(
+          "work-banner"
+        ).style.minHeight = `${minHeight}px`;
+      }
     }
     const box = document.getElementById("work-banner");
     handleResize(box);
@@ -57,9 +70,9 @@ const ProjectBannerH = ({
   return (
     <div
       id="work-banner"
-      className="relative md:flex md:flex-col md:items-start md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[750px] ml-[-40px] mt-10 rounded-r-full"
+      className="relative flex flex-col items-start justify-center bg-[#2954B5] h-[100%] lg:h-[50%] w-full min-w-[800px] ml-[-40px] mt-10 rounded-r-full"
     >
-      <h3 className="absolute top-1 lg:top-3 2xl:top-9 self-center text-lg lg:text-[17px] 2xl:text-[35px] text-[#E7E7E7] fade-in">
+      <h3 className="absolute top-1 lg:top-2 2xl:top-6 self-center text-lg lg:text-[17px] 2xl:text-[35px] text-[#E7E7E7] fade-in">
         {oneSelected ? selected.name : "Latest Work"}
       </h3>
       {oneSelected && (
@@ -99,7 +112,7 @@ const ProjectBannerH = ({
         ))}
       </div>
       <div
-        className={`absolute w-[90%] h-[68%] gap-10 flex justify-start z-20 ${
+        className={`absolute w-[100%] h-[68%] gap-10 flex justify-start z-20 pr-32 xl:pr-48 2xl:pr-60 ${
           oneSelected ? "fade-in-fast" : "hidden"
         }`}
       >
@@ -112,28 +125,30 @@ const ProjectBannerH = ({
             src={selected.demo}
           ></iframe>
         </div>
-        <div className="text-white flex flex-col justify-between ">
+        <div className="text-white flex flex-col justify-between w-full">
           <div>
-            <div className="pr-12">
+            <div className="pr-12 w-full">
               {selected.technologies?.map((tech) => (
                 <TechTag tech={tech} />
               ))}
             </div>
-            <h5 className="mt-1 lg:text-lg md:text-[14px]">About</h5>
-            <p className="mt-1 lg:text-[9pt] md:text-[11px] h-24 lg:max-w-[440px] md:max-w-[300px] overflow-scroll hide-scroll">
+            <h5 className="mt-1 2xl:mt-4 md:text-[14px] lg:text-lg 2xl:text-3xl">
+              About
+            </h5>
+            <p className="mt-1 2xl:mt-4 lg:text-[9pt] sm:text-[10px] md:text-[11px] 2xl:text-2xl w-full 2xl:max-w-[980px] xl:max-w-[500px] overflow-scroll hide-scroll">
               {selected.about}
             </p>
           </div>
-          <div className="flex md:justify-start items-center pr-12">
+          <div className="flex justify-start 2xl:text-xl items-center pr-12">
             <a href={selected.url} className="flex justify-end">
-              <button className="flex items-center justify-between w-28 pl-4 pr-2 lg:py-2 md:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
+              <button className="flex items-center justify-between w-28 2xl:w-44 pl-4 pr-2 lg:py-2 py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
                 <div>Go to site</div>
-                <GiEarthAmerica className="pb-1" size={20} />
+                <GiEarthAmerica className="pb-1 text-[20px] 2xl:text-[30px]" />
               </button>
             </a>
             <a href={selected.repo} className="">
-              <button className="flex items-center justify-between w-[92px] pl-2 pr-4 lg:py-[5px] md:py-[1px] bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
-                <DiGithubBadge className="pb-1" size={26} />
+              <button className="flex items-center justify-between w-[92px] 2xl:w-[130px] pl-2 pr-4 py-[1px] lg:py-[5px] 2xl:py-[4px] bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
+                <DiGithubBadge className="pb-1 text-[26px] 2xl:text-[38px]" />
                 <div>Code</div>
               </button>
             </a>

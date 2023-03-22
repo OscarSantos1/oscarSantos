@@ -2,16 +2,35 @@ import { DiGithubBadge } from "react-icons/di";
 import { GiEarthAmerica } from "react-icons/gi";
 import TechTagV from "@/components/TechTagV";
 import ProjectCardV from "./ProjectCardV";
+import { useEffect } from "react";
 
 const ProjectBannerV = ({
+  horizontal,
   projects,
   oneSelected,
   setOneSelected,
   selected,
   setSelected,
 }) => {
+  useEffect(() => {
+    function setMinWidth() {
+      if (!horizontal && document.getElementById("vertical-banner")) {
+        const height = document.getElementById("vertical-banner").offsetHeight;
+        const minWidth = height / 1.5;
+        document.getElementById("about-me").style.height = `40%`;
+        console.log(minWidth);
+        document.getElementById(
+          "vertical-banner"
+        ).style.minWidth = `${minWidth}px`;
+      }
+    }
+    window.addEventListener("resize", setMinWidth);
+  });
   return (
-    <div className="relative flex flex-col self-center justify-end items-center w-[100%] h-[100%] bg-[#2954B5] pt-10 md:pt-12 2xl:pt-20 pb-2 rounded-t-full">
+    <div
+      id="vertical-banner"
+      className="relative flex flex-col self-center justify-end items-center w-[100%] h-[100%] bg-[#2954B5] pt-10 md:pt-12 2xl:pt-20 pb-2 rounded-t-full"
+    >
       {oneSelected ? (
         <button
           onClick={() => {

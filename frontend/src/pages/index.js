@@ -29,7 +29,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex flex-col bg-[#FAFAFC] h-screen w-screen py-4 pl-4 pr-4 md:py-10 md:pl-10 lg:pr-10 md:pr-5 ${
+        id="main"
+        className={`flex flex-col bg-[#FAFAFC] h-screen w-screen 2xl:min-h-[1150px] py-4 pl-4 pr-4 md:py-10 lg:pr-10 ${
           animate ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -46,6 +47,7 @@ export default function Home() {
           />
         ) : (
           <ProjectBannerV
+            horizontal={horizontal}
             projects={projects}
             oneSelected={oneSelected}
             setOneSelected={setOneSelected}

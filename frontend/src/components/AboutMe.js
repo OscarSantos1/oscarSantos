@@ -16,7 +16,10 @@ const AboutMe = ({ setAnimate, animate }) => {
     window.addEventListener("resize", () => handleResize(box));
   }, []);
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-around md:justify-between md:items-center h-[30%] sm:h-[50%] md:h-[36%] md:min-h-[226px] lg:pl-2 md:pr-10 mt-3 md:mt-0">
+    <div
+      id="about-me"
+      className="flex flex-col-reverse md:flex-row justify-around gap-2 md:gap-0 md:justify-between md:items-center h-[30%] sm:h-[50%] md:h-[36%] lg:pl-2 md:pr-10 mt-3 md:mt-0"
+    >
       <p className="w-[85%] md:w-[55%] text-[#646464] text-[10px] sm:text-[12px] 2xl:text-3xl lg:text-[16px] md:text-[14px]">
         I'm passionate about creating new products and tools. I love working
         with other people and most importantly helping a vision come to life.
