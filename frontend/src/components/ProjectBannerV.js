@@ -78,8 +78,8 @@ const ProjectBannerV = ({
                   ))}
                 </div>
               </div>
-              <h5 className="mt-1 sm:text-xl md:text-2xl lg:text-3xl">About</h5>
-              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-xl h-24 lg:max-w-[600px] text-center overflow-scroll hide-scroll">
+              <h5 className="mt-1 sm:text-xl md:text-xl lg:text-3xl">About</h5>
+              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-base h-24 lg:max-w-[600px] text-center overflow-scroll hide-scroll">
                 {selected.about}
               </p>
             </div>
@@ -92,7 +92,7 @@ const ProjectBannerV = ({
                   </button>
                 </a>
                 <a href={selected.repo} className="">
-                  <button className="flex items-center justify-between w-[92px] md:w-36 xl:w-36 pl-2 pr-4 md:py-2 xl:py-2 lg:py-[5px] bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
+                  <button className="flex items-center justify-between w-[92px] md:w-36 xl:w-36 pl-2 pr-4 md:py-2 xl:py-2 lg:py-2 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
                     <DiGithubBadge className="pb-1" size={26} />
                     <div>Code</div>
                   </button>

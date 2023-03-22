@@ -57,7 +57,7 @@ const ProjectBannerH = ({
   return (
     <div
       id="work-banner"
-      className="relative hidden md:flex md:flex-col md:items-start md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[840px] ml-[-40px] mt-10 rounded-r-full"
+      className="relative md:flex md:flex-col md:items-start md:justify-center bg-[#2954B5] h-[40%] lg:h-[50%] w-full min-w-[750px] ml-[-40px] mt-10 rounded-r-full"
     >
       <h3 className="absolute top-1 self-center text-lg text-[#E7E7E7] mt-3 mb-4 fade-in">
         {oneSelected ? selected.name : "Latest Work"}
