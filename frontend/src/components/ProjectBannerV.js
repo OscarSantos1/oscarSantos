@@ -42,7 +42,7 @@ const ProjectBannerV = ({
           Close
         </button>
       ) : (
-        <h3 className="absolute top-[10px] md:top-[15px] 2xl:top-[25px] self-center text-sm md:text-lg 2xl:text-2xl text-[#E7E7E7] fade-in">
+        <h3 className="absolute top-[10px] md:top-[15px] 2xl:top-[25px] self-center text-sm md:text-lg 2xl:text-2xl text-[#E7E7E7] fade-instant">
           Latest Work
         </h3>
       )}

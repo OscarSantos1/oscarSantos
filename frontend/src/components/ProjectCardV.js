@@ -24,13 +24,14 @@ const ProjectCardV = ({
     >
       <div
         id="project-container"
-        className={`flex justify-center items-center h-full ease-out duration-500 ${
+        className={`relative flex justify-center items-center h-full ease-out duration-500 ${
           oneSelected && selected.name == title
             ? "rectangle"
             : "square rounded-full"
         } ${color}`}
       >
         <Icon title={title} />
+        <div className="absolute bottom-5 text-[#E7E7E7]">{title}</div>
       </div>
     </div>
   );
