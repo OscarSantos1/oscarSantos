@@ -95,7 +95,7 @@ const ProjectBannerV = ({
                 </div>
               </div>
               <h5 className="mt-0 sm:text-xl md:text-xl lg:text-3xl">About</h5>
-              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-base lg:max-w-[600px] overflow-scroll max-h-28 text-center mx-[-23px] bg-lime-400/20">
+              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-base lg:max-w-[600px] overflow-scroll max-h-28 text-center mx-[-35px] bg-lime-400/20">
                 {selected.about}
               </p>
             </div>
