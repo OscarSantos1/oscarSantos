@@ -47,7 +47,7 @@ const ProjectBannerV = ({
         </h3>
       )}
 
-      <div className="relative flex items-end h-[100%] w-[70%] bg-black/10">
+      <div className="relative flex items-end h-[100%] w-[70%]">
         <div
           className={`relative w-full fade-in ease-in-out duration-700 ${
             oneSelected ? "h-[36%] 2xl:h-[50%]" : "h-[100%]"
@@ -82,8 +82,8 @@ const ProjectBannerV = ({
             oneSelected ? "flex justify-center fade-in-fast" : "hidden"
           } bottom-[36%] 2xl:bottom-[50%] left-[50%] translate-x-[-50%] h-[64%] 2xl:h-[50%] w-[100%]`}
         >
-          <div className="text-white flex flex-col justify-between bg-slate-500/20 pb-2">
-            <div className="flex flex-col md:gap-2 justify-start md:justify-around items-center h-[90%] 2xl:max-h-[500px] xl:max-h-[400px] lg:max-h-[400px] bg-emerald-600/30 ">
+          <div className="text-white flex flex-col justify-between pb-2">
+            <div className="flex flex-col md:gap-2 justify-start md:justify-around items-center h-[90%] 2xl:max-h-[500px] xl:max-h-[400px] lg:max-h-[400px]">
               <h3 className="pt-2 text-sm sm:text-xl md:text-2xl lg:text-3xl">
                 {selected.name}
               </h3>
@@ -95,11 +95,11 @@ const ProjectBannerV = ({
                 </div>
               </div>
               <h5 className="mt-0 sm:text-xl md:text-xl lg:text-3xl">About</h5>
-              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-base lg:max-w-[600px] overflow-scroll max-h-28 text-center mx-[-35px] bg-lime-400/20">
+              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-base lg:max-w-[600px] overflow-scroll max-h-28 text-center mx-[-35px]">
                 {selected.about}
               </p>
             </div>
-            <div className="flex justify-center items-center bg-red-400/20">
+            <div className="flex justify-center items-center">
               <div className="flex md:text-xl xl:text-[20px] ">
                 <a href={selected.url} className="flex justify-end">
                   <button className="flex items-center justify-between w-28 md:w-40 xl:w-40 pl-4 pr-2 lg:py-2 md:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
