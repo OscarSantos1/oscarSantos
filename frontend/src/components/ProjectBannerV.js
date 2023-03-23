@@ -29,7 +29,7 @@ const ProjectBannerV = ({
   return (
     <div
       id="vertical-banner"
-      className="relative flex flex-col self-center justify-end items-center w-[100%] h-[100%] bg-[#2954B5] pt-10 md:pt-12 2xl:pt-20 pb-2 rounded-t-full"
+      className="relative flex flex-col self-center justify-end items-center w-[100%] h-[100%] bg-[#2954B5] pt-8 md:pt-12 2xl:pt-20 pb-2 rounded-t-full"
     >
       {oneSelected ? (
         <button
@@ -47,7 +47,7 @@ const ProjectBannerV = ({
         </h3>
       )}
 
-      <div className="relative flex items-end h-[100%] w-[70%] ">
+      <div className="relative flex items-end h-[100%] w-[70%] bg-black/10">
         <div
           className={`relative w-full fade-in ease-in-out duration-700 ${
             oneSelected ? "h-[36%] 2xl:h-[50%]" : "h-[100%]"
@@ -83,19 +83,19 @@ const ProjectBannerV = ({
           } bottom-[36%] 2xl:bottom-[50%] left-[50%] translate-x-[-50%] h-[64%] 2xl:h-[50%] w-[100%]`}
         >
           <div className="text-white flex flex-col justify-between bg-slate-500/20 pb-2">
-            <div className="flex flex-col gap-0 md:gap-2 justify-around items-center h-[90%] 2xl:max-h-[500px] xl:max-h-[400px] lg:max-h-[400px] bg-emerald-600/30 ">
-              <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl">
+            <div className="flex flex-col md:gap-2 justify-start md:justify-around items-center h-[90%] 2xl:max-h-[500px] xl:max-h-[400px] lg:max-h-[400px] bg-emerald-600/30 ">
+              <h3 className="pt-2 text-sm sm:text-xl md:text-2xl lg:text-3xl">
                 {selected.name}
               </h3>
               <div className="flex justify-center text-center">
-                <div className="">
+                <div className="pt-1">
                   {selected.technologies?.map((tech) => (
                     <TechTagV tech={tech} />
                   ))}
                 </div>
               </div>
-              <h5 className="mt-1 sm:text-xl md:text-xl lg:text-3xl">About</h5>
-              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-base lg:max-w-[600px] overflow-scroll max-h-24 text-center mx-[-20px] bg-lime-400/20">
+              <h5 className="mt-0 sm:text-xl md:text-xl lg:text-3xl">About</h5>
+              <p className="mt-1 lg:text-[13pt] xl:text-[15pt] md:text-base lg:max-w-[600px] overflow-scroll max-h-24 text-center mx-[-23px] bg-lime-400/20">
                 {selected.about}
               </p>
             </div>
