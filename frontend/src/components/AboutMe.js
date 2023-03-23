@@ -18,15 +18,15 @@ const AboutMe = ({ setAnimate, animate }) => {
   return (
     <div
       id="about-me"
-      className="flex flex-col-reverse md:flex-row justify-around gap-2 md:gap-0 md:justify-between md:items-center h-[30%] sm:h-[50%] md:h-[36%] lg:pl-2 md:pr-10 mt-3 md:mt-0"
+      className="flex flex-col-reverse md:flex-row justify-around gap-2 md:gap-0 md:justify-between md:items-center sm:h-[50%] md:h-[36%] lg:pl-2 md:pr-10 mt-3 md:mt-0 bg-slate-500/20"
     >
-      <p className="w-[85%] md:w-[55%] text-[#646464] text-[10px] sm:text-[12px] 2xl:text-3xl lg:text-[16px] md:text-[14px]">
+      <p className="w-[85%] md:w-[55%] text-[#646464] text-[10px] mb-1 md:mb-0 sm:text-[12px] 2xl:text-3xl lg:text-[16px] md:text-[14px]">
         I'm passionate about creating new products and tools. I love working
         with other people and most importantly helping a vision come to life.
       </p>
       <div
         id="slider-frame"
-        className="relative w-[40%] min-w-[40%] pt-[20%] sm:w-[40%] sm:pt-[20%] md:w-[40%] md:pt-[20%] lg:w-[34%] lg:pt-[17%]"
+        className="relative w-[30%] pt-[15%] sm:w-[40%] sm:pt-[20%] md:w-[40%] md:pt-[20%] lg:w-[34%] lg:pt-[17%]"
       >
         <div
           className={`slider flex items-center bg-[#2954B5] rounded-full overflow-clip ${

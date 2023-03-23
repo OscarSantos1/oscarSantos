@@ -17,13 +17,14 @@ const ProjectBannerV = ({
       if (!horizontal && document.getElementById("vertical-banner")) {
         const height = document.getElementById("vertical-banner").offsetHeight;
         const minWidth = height / 1.5;
-        document.getElementById("about-me").style.height = `40%`;
+        document.getElementById("about-me").style.height = `20%`;
         console.log(minWidth);
         document.getElementById(
           "vertical-banner"
         ).style.minWidth = `${minWidth}px`;
       }
     }
+    setMinWidth();
     window.addEventListener("resize", setMinWidth);
   });
   return (
