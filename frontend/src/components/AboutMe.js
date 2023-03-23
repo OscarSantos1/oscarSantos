@@ -46,7 +46,7 @@ const AboutMe = ({ setAnimate, animate }) => {
                 <Image
                   onLoad={() => setAnimate(true)}
                   alt={"image"}
-                  src="/images/home-office.png"
+                  src="https://oscardelossantos.herokuapp.com/images/home-office.png"
                   fill
                   priority
                   sizes="(max-width: 9999px) 9999vw,
