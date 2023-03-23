@@ -46,7 +46,7 @@ const AboutMe = ({ setAnimate, animate }) => {
                 <Image
                   onLoad={() => setAnimate(true)}
                   alt={"image"}
-                  src="/../public/images/home-office.png"
+                  src="/images/home-office.png"
                   fill
                   priority
                   sizes="(max-width: 9999px) 9999vw,

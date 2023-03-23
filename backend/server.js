@@ -1,6 +1,7 @@
 const express = require("express");
 const next = require("next");
 const path = require("path");
+const cors = require("cors");
 require("dotenv").config();
 
 const dev = process.env.NODE_ENV !== "production";
@@ -12,6 +13,9 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    // Image static folder
+    server.use(cors());
+    server.use(express.static(path.join(__dirname, "public")));
 
     server.get("*", (req, res) => {
       return handle(req, res);
