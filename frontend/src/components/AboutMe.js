@@ -26,7 +26,7 @@ const AboutMe = ({ setAnimate, animate }) => {
       </p>
       <div
         id="slider-frame"
-        className="relative w-[40%] pt-[20%] sm:w-[40%] sm:pt-[20%] md:w-[40%] md:pt-[20%] lg:w-[34%] lg:pt-[17%]"
+        className="relative w-[40%] min-w-[40%] pt-[20%] sm:w-[40%] sm:pt-[20%] md:w-[40%] md:pt-[20%] lg:w-[34%] lg:pt-[17%]"
       >
         <div
           className={`slider flex items-center bg-[#2954B5] rounded-full overflow-clip ${

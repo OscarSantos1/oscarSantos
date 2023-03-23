@@ -19,7 +19,7 @@ const ProjectCard = ({
         onClick={() => (document.getElementById(title).style.width = square)}
         className={`absolute flex flex-col justify-center items-center ${position} ${
           !oneSelected
-            ? `opacity-1 fade-instant`
+            ? `opacity-1 fade-instant square`
             : selected == title
             ? `z-10 opacity-0 one-square ${color}`
             : `opacity-0 fade-out`

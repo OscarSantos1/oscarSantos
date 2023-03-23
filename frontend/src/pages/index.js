@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       <main
         id="main"
-        className={`flex flex-col bg-[#FAFAFC] h-screen w-screen 2xl:min-h-[1150px] py-4 pl-4 pr-4 md:py-10 lg:pr-10 ${
+        className={`flex flex-col justify-between bg-[#FAFAFC] h-screen w-screen 2xl:min-h-[1150px] py-4 pl-4 pr-4 md:py-10 lg:pr-10 ${
           animate ? "opacity-100" : "opacity-0"
         }`}
       >

@@ -55,6 +55,7 @@ const ProjectBannerV = ({
         >
           {projects.map((project) => (
             <ProjectCardV
+              key={project.id}
               title={project.name}
               position={project.positionV}
               color={project.brandColor}
