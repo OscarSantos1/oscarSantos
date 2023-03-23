@@ -32,7 +32,7 @@ const ProjectCardV = ({
       >
         <Icon title={title} />
         {!oneSelected && (
-          <div className="absolute bottom-5 text-[#E7E7E7]">{title}</div>
+          <div className="absolute bottom-[12%] text-[#E7E7E7]">{title}</div>
         )}
       </div>
     </div>
