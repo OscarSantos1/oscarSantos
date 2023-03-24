@@ -64,11 +64,13 @@ const ProjectBannerH = ({
       document.getElementById("work-banner").style.minHeight = `${minHeight}px`;
     }
   }
+
   useEffect(() => {
     const box = document.getElementById("work-banner");
     handleResize(box);
     window.addEventListener("resize", () => handleResize(box));
   }, []);
+
   return (
     <div
       onLoad={() =>
@@ -80,7 +82,7 @@ const ProjectBannerH = ({
       id="work-banner"
       className="relative flex flex-col items-start justify-center bg-[#2954B5]  h-[50%] lg:h-[50%] w-full min-w-[800px] ml-[-40px] mt-10 rounded-r-full"
     >
-      <h3 className="absolute top-1 lg:top-2 2xl:top-6 self-center text-lg lg:text-[17px] 2xl:text-[35px] text-[#E7E7E7] fade-in">
+      <h3 className="absolute top-1 lg:top-2 2xl:top-6 self-center text-lg lg:text-[17px] 2xl:text-[1.3vw] text-[#E7E7E7] fade-in">
         {oneSelected ? selected.name : "Latest Work"}
       </h3>
       {oneSelected && (
@@ -140,23 +142,23 @@ const ProjectBannerH = ({
                 <TechTag tech={tech} />
               ))}
             </div>
-            <h5 className="mt-1 2xl:mt-4 md:text-[14px] lg:text-lg 2xl:text-3xl">
+            <h5 className="mt-1 2xl:mt-4 md:text-[14px] lg:text-lg 2xl:text-[1.2vw]">
               About
             </h5>
-            <p className="mt-1 2xl:mt-4 lg:text-[9pt] sm:text-[10px] md:text-[11px] 2xl:text-2xl w-full 2xl:max-w-[980px] xl:max-w-[500px] overflow-scroll hide-scroll">
+            <p className="mt-1 2xl:mt-4 lg:text-[9pt] sm:text-[10px] md:text-[11px] 2xl:text-[0.8vw] w-full 2xl:max-w-[980px] xl:max-w-[500px] overflow-scroll hide-scroll">
               {selected.about}
             </p>
           </div>
-          <div className="flex justify-start 2xl:text-xl items-center pr-12">
+          <div className="flex justify-start 2xl:text-[0.9vw] items-center pr-12">
             <a href={selected.url} className="flex justify-end">
-              <button className="flex items-center justify-between w-28 2xl:w-44 pl-4 pr-2 lg:py-2 py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
-                <div>Go to site</div>
-                <GiEarthAmerica className="pb-1 text-[20px] 2xl:text-[30px]" />
+              <button className="flex items-center justify-between w-28 2xl:w-auto pl-4 pr-2 py-1 lg:py-[7px] 2xl:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
+                <div className="">Go to site</div>
+                <GiEarthAmerica className="text-[20px] 2xl:ml-4 " />
               </button>
             </a>
             <a href={selected.repo} className="">
-              <button className="flex items-center justify-between w-[92px] 2xl:w-[130px] pl-2 pr-4 py-[1px] lg:py-[5px] 2xl:py-[4px] bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
-                <DiGithubBadge className="pb-1 text-[26px] 2xl:text-[38px]" />
+              <button className="flex items-center justify-between w-[92px] 2xl:w-auto pl-2 pr-4 py-[1px] lg:py-[4px] 2xl:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
+                <DiGithubBadge className="text-[26px] mr-4" />
                 <div>Code</div>
               </button>
             </a>

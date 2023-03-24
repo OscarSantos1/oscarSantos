@@ -40,6 +40,10 @@ body {
   right: 0;
 }
 
+.responsive-tag-text {
+  font-size: 1.2vmin;
+}
+
 .square {
   aspect-ratio: 1;
 }
