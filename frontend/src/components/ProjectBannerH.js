@@ -153,12 +153,12 @@ const ProjectBannerH = ({
             <a href={selected.url} className="flex justify-end">
               <button className="flex items-center justify-between w-28 2xl:w-auto pl-4 pr-2 py-1 lg:py-[7px] 2xl:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-l-full">
                 <div className="">Go to site</div>
-                <GiEarthAmerica className="text-[20px] 2xl:ml-4 " />
+                <GiEarthAmerica className="text-[20px] 2xl:ml-4" />
               </button>
             </a>
             <a href={selected.repo} className="">
               <button className="flex items-center justify-between w-[92px] 2xl:w-auto pl-2 pr-4 py-[1px] lg:py-[4px] 2xl:py-1 bg-[#212530] active:bg-slate-600 ease-in duration-[40ms] rounded-r-full border-l border-slate-600">
-                <DiGithubBadge className="text-[26px] mr-4" />
+                <DiGithubBadge className="text-[26px] 2xl:mr-4" />
                 <div>Code</div>
               </button>
             </a>
