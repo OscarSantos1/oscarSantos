@@ -60,7 +60,7 @@ const ProjectBannerH = ({
     if (horizontal && document.getElementById("work-banner")) {
       const Width = document.getElementById("work-banner").offsetWidth;
       console.log(screenSize);
-      const minHeight = screenSize > 1024 ? Width / 4.3 : Width / 3.5;
+      const minHeight = screenSize > 1024 ? Width / 5.1 : Width / 3.5;
       document.getElementById("work-banner").style.minHeight = `${minHeight}px`;
     }
   }

@@ -47,8 +47,10 @@ export default function Home() {
       <main
         id="main"
         className={`flex flex-col justify-between bg-[#FAFAFC] ${
-          mobile ? "fixed left-0 top-0 right-0 bottom-0" : "h-screen w-screen"
-        }  2xl:min-h-[1150px] pt-4 pl-4 pr-4 md:pt-10 lg:pr-10 ${
+          mobile && !horizontal
+            ? "fixed left-0 top-0 right-0 bottom-0"
+            : "h-screen w-screen"
+        } pt-4 pl-4 pr-4 md:py-10 lg:pr-10 ${
           animate ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -71,6 +73,7 @@ export default function Home() {
             setOneSelected={setOneSelected}
             selected={selected}
             setSelected={setSelected}
+            mobile={mobile}
           />
         )}
       </main>

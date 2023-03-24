@@ -11,13 +11,16 @@ const ProjectBannerV = ({
   setOneSelected,
   selected,
   setSelected,
+  mobile,
 }) => {
   useEffect(() => {
     function setMinWidth() {
       if (!horizontal && document.getElementById("vertical-banner")) {
         const height = document.getElementById("vertical-banner").offsetHeight;
         const minWidth = height / 1.5;
-        document.getElementById("about-me").style.height = `20%`;
+        document.getElementById("about-me").style.height = mobile
+          ? `20%`
+          : "30%";
         console.log(minWidth);
         document.getElementById(
           "vertical-banner"
@@ -84,7 +87,11 @@ const ProjectBannerV = ({
           } bottom-[36%] 2xl:bottom-[50%] left-[50%] translate-x-[-50%] h-[64%] 2xl:h-[50%] w-[100%]`}
         >
           <div className="text-white flex flex-col justify-between pb-2">
-            <div className="flex flex-col md:gap-2 justify-start md:justify-around items-center h-[90%] 2xl:max-h-[500px] xl:max-h-[400px] lg:max-h-[400px]">
+            <div
+              className={`flex flex-col md:gap-2 justify-start ${
+                !mobile && "gap-4"
+              } md:justify-around items-center h-[90%] 2xl:max-h-[500px] xl:max-h-[400px] lg:max-h-[400px]`}
+            >
               <h3 className="pt-2 text-sm sm:text-xl md:text-2xl lg:text-3xl">
                 {selected.name}
               </h3>
