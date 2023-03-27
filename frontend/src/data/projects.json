@@ -1,13 +1,14 @@
 [
   {
     "id": 0,
-    "name": "Do me.",
+    "name": "Diurnal",
     "brandColor": "green",
     "position": "one",
     "positionV": "one-ver",
     "open": "one-square",
     "hide": "one-out",
-    "about": "Do me is a GTD type web app that helps boost productivity for people that have a hard time commiting to a schedule",
+    "about": "Developed as a tool that applies a minimalist productivity framework to help users focus on the most important assignments day by day. This app aims to increase productivity and reduce burnout.",
+    "onsale": false,
     "technologies": [
       "React JS",
       "MySQL",
@@ -29,7 +30,8 @@
     "positionV": "two-ver",
     "open": "one-square",
     "hide": "two-out",
-    "about": "notArealStore is a complete online store where you can find urban style clothes and accesories for men.",
+    "about": "NotARealStore is a fully functional, fully responsive online clothing store waiting to become the new home of your clothing line and brand. The store can handle a constantly increasing inventory, credit card payments, sending purchase confirmation emails and user authorization and authentication.",
+    "onsale": true,
     "technologies": [
       "Next JS",
       "Stripe",
@@ -53,6 +55,7 @@
     "open": "one-square",
     "hide": "three-out",
     "about": "Blank Page is a simple but highly useful AI powered tool for artists and creators to get out of a creative block. With one click, Blank Page provides you with an AI generated premise for your next story, ilustration, animation, you name it.",
+    "onsale": false,
     "technologies": [
       "Open AI",
       "TypeScript",
