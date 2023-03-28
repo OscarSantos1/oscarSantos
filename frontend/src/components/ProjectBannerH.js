@@ -145,7 +145,7 @@ const ProjectBannerH = ({
             <h5 className="mt-1 2xl:mt-4 md:text-[14px] lg:text-lg 2xl:text-[1.2vw]">
               About
             </h5>
-            <p className="mt-1 2xl:mt-4 lg:text-[9pt] sm:text-[10px] md:text-[11px] 2xl:text-[0.8vw] w-full 2xl:max-w-[980px] xl:max-w-[500px] overflow-scroll hide-scroll">
+            <p className="mt-1 2xl:mt-4 lg:text-[9pt] sm:text-[10px] md:text-[11px] 2xl:text-[0.8vw] w-full 2xl:max-w-[980px] xl:max-w-[500px] overflow-scroll hide-scroll md:max-h-[40%] lg:max-h-max">
               {selected.about}
             </p>
           </div>

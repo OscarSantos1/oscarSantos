@@ -30,7 +30,7 @@
     "positionV": "two-ver",
     "open": "one-square",
     "hide": "two-out",
-    "about": "NotARealStore is a fully functional, fully responsive online clothing store waiting to become the new home of your clothing line and brand. The store can handle a constantly increasing inventory, credit card payments, sending purchase confirmation emails and user authorization and authentication.",
+    "about": "NotARealStore is a fully functional, fully responsive online clothing store. The new home of your clothing line and brand. It can handle a constantly increasing inventory, credit card payments, sending purchase confirmation emails and user authorization and authentication.",
     "onsale": true,
     "technologies": [
       "Next JS",
