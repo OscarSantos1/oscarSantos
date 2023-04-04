@@ -73,12 +73,6 @@ const ProjectBannerH = ({
 
   return (
     <div
-      onLoad={() =>
-        setTimeout(
-          () => handleResize(document.getElementById("work-banner")),
-          100
-        )
-      }
       id="work-banner"
       className="relative flex flex-col items-start justify-center bg-[#2954B5]  h-[50%] lg:h-[50%] w-full min-w-[800px] ml-[-40px] mt-10 rounded-r-full"
     >
